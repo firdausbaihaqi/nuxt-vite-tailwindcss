@@ -26,6 +26,14 @@
         </a>
       </div>
     </div>
+
+    <div class="p-4 sm:p-4">
+      <NuxtImg
+        class="mt-6 rounded shadow-xl"
+        src="/img/photo-1612831197310-ff5cf7a211b6.jpeg"
+        sizes="sm:100vw md:50vw lg:400px"
+      />
+    </div>
   </div>
 </template>
 
