@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto text-center h-screen flex flex-col items-center justify-center"
+    class="container p-4 mx-auto text-center h-screen flex flex-col items-center justify-center"
   >
     <div>
       <Logo />
@@ -27,12 +27,13 @@
       </div>
     </div>
 
-    <div class="p-4 sm:p-4">
-      <NuxtImg
-        class="mt-6 rounded shadow-xl"
-        src="/img/photo-1612831197310-ff5cf7a211b6.jpeg"
-        sizes="sm:100vw md:50vw lg:400px"
-      />
+    <div class="mt-6 w-full">
+      <div class="aspect-w-3 aspect-h-2 sm:aspect-w-16 sm:aspect-h-9">
+        <NuxtImg
+          class="object-cover object-center rounded shadow-xl"
+          src="/img/photo-1519046904884-53103b34b206.jpg"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -40,5 +41,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  name: 'HomePage',
+})
 </script>
