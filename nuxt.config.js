@@ -1,7 +1,10 @@
-export default {
+import { defineNuxtConfig } from '@nuxtjs/composition-api'
+
+export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-vite-tailwindcss',
+    title: 'Nuxt',
+    titleTemplate: 'My amazing Nuxt application | %s',
     htmlAttrs: {
       lang: 'en',
       class: ['antialiased'],
@@ -18,7 +21,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/axios', '~/plugins/api'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -27,6 +30,8 @@ export default {
   buildModules: [
     // https://vite.nuxtjs.org/get-started/usage
     'nuxt-vite',
+    // https://composition-api.nuxtjs.org/getting-started/setup
+    '@nuxtjs/composition-api',
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
@@ -43,13 +48,24 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://i18n.nuxtjs.org/setup
+    'nuxt-i18n',
   ],
+
+  vite: {
+    /* options for vite */
+    vue: {
+      /* options for vite-plugin-vue2 */
+    },
+  },
 
   tailwindcss: {
     jit: true,
   },
 
   image: {},
+
+  i18n: {},
 
   googleFonts: {
     display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
@@ -63,4 +79,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+})

@@ -16,20 +16,15 @@
         >
           Documentation
         </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block px-6 py-2 text-brand-600 border border-brand-600 rounded-lg"
-        >
-          GitHub
-        </a>
+        <NuxtLink class="btn btn-secondary" :to="{ name: 'posts' }">
+          Posts
+        </NuxtLink>
       </div>
     </div>
 
     <div class="mt-6 w-full">
       <div class="aspect-w-3 aspect-h-2 sm:aspect-w-16 sm:aspect-h-9">
-        <NuxtImg
+        <NuxtPicture
           class="object-cover object-center rounded shadow-xl"
           src="/img/photo-1519046904884-53103b34b206.jpg"
         />
@@ -39,9 +34,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'HomePage',
 })
 </script>
