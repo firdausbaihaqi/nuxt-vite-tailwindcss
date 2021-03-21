@@ -10,7 +10,7 @@
 
 @layer components {
   .btn {
-    @apply inline-block px-6 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-block font-medium transition px-6 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
 
   .btn-primary {
@@ -18,6 +18,6 @@
   }
 
   .btn-secondary {
-    @apply text-white bg-gray-500 border-gray-500 hover:border-gray-400 focus:border-gray-600 hover:bg-gray-400 focus:bg-gray-600 focus:ring-gray-500;
+    @apply text-brand-500 bg-white border-brand-500 hover:text-white hover:border-brand-400 focus:border-brand-600 hover:bg-brand-400 focus:bg-brand-600 focus:ring-brand-500;
   }
 }

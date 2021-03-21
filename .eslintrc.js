@@ -12,6 +12,8 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     // Enforce specific casing for the component naming style in template
     'vue/component-name-in-template-casing': [
       'error',

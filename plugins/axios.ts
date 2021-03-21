@@ -2,11 +2,13 @@ import { Context } from '@nuxt/types'
 import camelcaseKeys from 'camelcase-keys'
 import { defineNuxtPlugin } from '@nuxtjs/composition-api'
 
-export default defineNuxtPlugin(({ $axios }: Context) => {
+export default defineNuxtPlugin(({ $axios, isDev }: Context) => {
   $axios.onRequest((config) => {
-    console.log('Making request to ' + config.url)
-    if (config.params) {
-      console.log('params ' + config.params)
+    if (isDev) {
+      console.log('Making request to ' + config.url)
+      if (config.params) {
+        console.log('params ' + config.params)
+      }
     }
 
     config.transformResponse = (data) => {

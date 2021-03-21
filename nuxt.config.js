@@ -17,6 +17,10 @@ export default defineNuxtConfig({
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  loading: {
+    color: '#0ea5e9',
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -52,9 +56,7 @@ export default defineNuxtConfig({
     'nuxt-i18n',
   ],
 
-  serverMiddleware: {
-    '/api': '~/server',
-  },
+  serverMiddleware: ['~/server'],
 
   vite: {
     /* options for vite */

@@ -16,15 +16,16 @@
         >
           Documentation
         </a>
-        <NuxtLink class="btn btn-secondary" :to="{ name: 'posts' }">
-          Posts
+        <NuxtLink class="relative btn btn-secondary" :to="{ name: 'posts' }">
+          <span>Posts</span>
+          <AnimatePing />
         </NuxtLink>
       </div>
     </div>
 
     <div class="mt-6 w-full">
       <div class="aspect-w-3 aspect-h-2 sm:aspect-w-16 sm:aspect-h-9">
-        <NuxtPicture
+        <NuxtImg
           class="object-cover object-center rounded shadow-xl"
           src="/img/photo-1519046904884-53103b34b206.jpg"
         />

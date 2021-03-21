@@ -1,21 +1,18 @@
-import axios from 'axios'
 import { Request, Response, Router } from 'express'
+import got from 'got'
 
 const router = Router()
 
-const fetchPost = async () => {
-  const { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts`)
-  return data
+const fetchPost = () => {
+  return got.get(`https://jsonplaceholder.typicode.com/posts`).json()
 }
-const fetchPostById = async (id: string | number) => {
-  const { data } = await axios.get(
-    `https://jsonplaceholder.typicode.com/posts/${id}`
-  )
-  return data
+
+const fetchPostById = (id: string | number) => {
+  return got.get(`https://jsonplaceholder.typicode.com/posts/${id}`).json()
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-router.get('', async (req: Request, res: Response) => {
+router.get('/', async (req: Request, res: Response) => {
   return res.json(await fetchPost())
 })
 
