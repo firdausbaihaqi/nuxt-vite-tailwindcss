@@ -28,9 +28,14 @@ import {
   useFetch,
   useRoute,
 } from '@nuxtjs/composition-api'
+import { Context } from '@nuxt/types'
 
 export default defineComponent({
   name: 'Post',
+  validate({ params }: Context): Promise<boolean> | boolean {
+    return /^\d+$/.test(params.id) && params.id > 0
+  },
+
   setup() {
     const route = useRoute()
     const id = computed(() => route.value.params.id)
