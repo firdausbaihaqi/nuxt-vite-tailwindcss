@@ -52,6 +52,10 @@ export default defineNuxtConfig({
     'nuxt-i18n',
   ],
 
+  serverMiddleware: {
+    '/api': '~/server',
+  },
+
   vite: {
     /* options for vite */
     vue: {

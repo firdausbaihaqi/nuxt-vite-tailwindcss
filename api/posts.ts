@@ -6,9 +6,9 @@ interface ShowParams {
 
 export default ($axios: NuxtAxiosInstance) => ({
   index() {
-    return $axios.$get(`https://jsonplaceholder.typicode.com/posts`)
+    return $axios.$get(`/api/posts`)
   },
   show({ id }: ShowParams) {
-    return $axios.$get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    return $axios.$get(`/api/posts/${id}`)
   },
 })

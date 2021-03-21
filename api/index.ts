@@ -1,6 +1,6 @@
 import { NuxtAxiosInstance } from '@nuxtjs/axios'
-import post from './post'
+import posts from './posts'
 
 export default ($axios: NuxtAxiosInstance) => ({
-  post: post($axios),
+  posts: posts($axios),
 })

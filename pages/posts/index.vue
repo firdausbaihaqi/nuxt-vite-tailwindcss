@@ -30,7 +30,7 @@ export default defineComponent({
     const { $api } = useContext()
 
     useFetch(async () => {
-      posts.value = await $api.post.index()
+      posts.value = await $api.posts.index()
     })
 
     return { posts }

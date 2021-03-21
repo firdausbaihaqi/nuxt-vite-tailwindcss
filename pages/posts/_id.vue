@@ -33,7 +33,7 @@ import { Context } from '@nuxt/types'
 export default defineComponent({
   name: 'Post',
   validate({ params }: Context): Promise<boolean> | boolean {
-    return /^\d+$/.test(params.id) && params.id > 0
+    return /^\d+$/.test(params.id) && parseInt(params.id) > 0
   },
 
   setup() {
@@ -43,7 +43,7 @@ export default defineComponent({
     const { $api } = useContext()
 
     useFetch(async () => {
-      post.value = await $api.post.show({ id: id.value })
+      post.value = await $api.posts.show({ id: id.value })
     })
 
     return { post }
