@@ -18,7 +18,4 @@ if (require.main === module) {
 }
 
 // Export express app
-export default {
-  path: '/api',
-  handler: app,
-}
+export default app

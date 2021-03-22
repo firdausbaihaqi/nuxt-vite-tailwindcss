@@ -3,12 +3,14 @@ import got from 'got'
 
 const router = Router()
 
+const resource = 'https://jsonplaceholder.typicode.com'
+
 const fetchPost = () => {
-  return got.get(`https://jsonplaceholder.typicode.com/posts`).json()
+  return got.get(`${resource}/posts`).json()
 }
 
 const fetchPostById = (id: string | number) => {
-  return got.get(`https://jsonplaceholder.typicode.com/posts/${id}`).json()
+  return got.get(`${resource}/posts/${id}`).json()
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
