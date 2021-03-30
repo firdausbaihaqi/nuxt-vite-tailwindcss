@@ -1739,10 +1739,10 @@
     consola "^2.15.3"
     defu "^3.2.2"
 
-"@nuxtjs/composition-api@0.22.1":
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/composition-api/-/composition-api-0.22.1.tgz#aa14065b489bbdd3ce72f32132d8a7ffd96ac1a6"
-  integrity sha512-47yAd9GCj2K7OLmM/U03LkldNyXU0zGEjgUrIodD/2vMZArGjFsPoRns6K4oIvvUKeia8MXzjEMYxAsSm5IFlw==
+"@nuxtjs/composition-api@^0.22.4":
+  version "0.22.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/composition-api/-/composition-api-0.22.4.tgz#e53db8a992aa79100baa292429c51ea6c58e749a"
+  integrity sha512-JJwcyhVMCxjClogQjteFJ5hN+FeR0oLkzaBATpikV34woZ9/gzUuIxPzvOzq2hmjYty5qNGqZM+B3668R8Jwvw==
   dependencies:
     "@vue/composition-api" "1.0.0-rc.5"
     defu "^3.2.2"
@@ -1805,7 +1805,7 @@
     consola "^2.12.1"
     stylelint-webpack-plugin "^2.0.0"
 
-"@nuxtjs/tailwindcss@^4.0.2":
+"@nuxtjs/tailwindcss@^4.0.1":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-4.0.2.tgz#d9d35668e8f2ba1562da539dace1bbae4dc498f5"
   integrity sha512-Y/sc1JFveLrRtyM8dkjG4EP9K7sHnAh552XBdhR2YQ55wvEKCupseCT8sCY2gCghkFVXseYEDFpbLJQAimbiEA==
@@ -2508,6 +2508,13 @@
   version "1.0.0-rc.5"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-rc.5.tgz#9b857743dd2692073b6df90fa2cfb9a75a1bb2f6"
   integrity sha512-sFBUDZxwi5YOQqH//VSGenO6WH0JuW94+CWo1eUsGSTRue8POfwD4oeduVqi/c6QcwXg2tJL/m6aOD2t/IR6zg==
+  dependencies:
+    tslib "^2.1.0"
+
+"@vue/composition-api@^1.0.0-rc.6":
+  version "1.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-rc.6.tgz#21ce2c169dd4ff17a5bf60c6e98863dff1a36540"
+  integrity sha512-M3jsyDBozQFqAPYdM4GCoVZEljIHsTVdcq5fZx9axpKz9ChIlQngxNf1ziLVaJvWX7T+MO1rVTEx6Xjgg/gUcQ==
   dependencies:
     tslib "^2.1.0"
 
@@ -5781,7 +5788,7 @@ eslint-plugin-unicorn@^28.0.2:
     safe-regex "^2.1.1"
     semver "^7.3.4"
 
-eslint-plugin-vue@^7.1.0, eslint-plugin-vue@^7.7.0, eslint-plugin-vue@^7.8.0:
+eslint-plugin-vue@^7.1.0, eslint-plugin-vue@^7.7.0:
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.8.0.tgz#cb0e85d65b65fa8d15e783fbb03c049d2c4cfdae"
   integrity sha512-OGrnPz+PuYL2HmVyBHxm4mRjxW2kfFCQE6Hw9G6qOHs/Pcu0srOlCCW0FMa8SLzIEqxl8WuKoBSPcMnrjUG2vw==
@@ -7195,10 +7202,10 @@ human-signals@^2.1.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
 
-husky@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-5.2.0.tgz#fc5e1c2300d34855d47de4753607d00943fc0802"
-  integrity sha512-AM8T/auHXRBxlrfPVLKP6jt49GCM2Zz47m8G3FOMsLmTv8Dj/fKVWE0Rh2d4Qrvmy131xEsdQnb3OXRib67PGg==
+husky@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-6.0.0.tgz#810f11869adf51604c32ea577edbc377d7f9319e"
+  integrity sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
@@ -9647,16 +9654,17 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@^6.22.2:
-  version "6.22.2"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.22.2.tgz#bdcaaf32438baba85700950e8d0709a841b2b80f"
-  integrity sha512-f5QQqaSosbCc0WOwpMvx4Enyu7/xUAUKmjdqvQ26qG/Jmiry5oLVyASxS8xVZMUubXijMJmHPELKLsv2Iu+WHg==
+nuxt-i18n@^6.22.3:
+  version "6.22.3"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.22.3.tgz#5e9e5c060bedc1c480827ada014f05f1fed11c7c"
+  integrity sha512-IZ4OLOYHsF6cKB0ik7j9rFr81xFmij/HQNgepcc63dFJFU6SSHJ6uO2RkGo7v8e0ttr9QDIiTM3xJrmd5W1PVQ==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
     "@intlify/vue-i18n-extensions" "^1.0.1"
     "@intlify/vue-i18n-loader" "^1.0.0"
     cookie "^0.4.0"
+    devalue "^2.0.1"
     is-https "^3.0.0"
     js-cookie "^2.2.1"
     klona "^2.0.4"
