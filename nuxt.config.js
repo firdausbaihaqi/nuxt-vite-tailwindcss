@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://vite.nuxtjs.org/get-started/usage
-    'nuxt-vite',
+    // 'nuxt-vite', // ERROR  'defineComponent' is not exported by .nuxt/composition-api/entrypoint.js, imported by layouts/default.vue?vue&type=script&lang.ts
     // https://composition-api.nuxtjs.org/getting-started/setup
     '@nuxtjs/composition-api',
     // https://go.nuxtjs.dev/typescript
