@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container p-4 mx-auto text-center h-screen flex flex-col items-center justify-center"
+    class="container p-4 mx-auto text-center min-h-screen flex flex-col items-center justify-center"
   >
     <div>
       <Logo />
