@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from '@nuxtjs/composition-api'
+import { ServerMiddleware } from '@nuxt/types/config/server-middleware'
 
 export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -56,7 +57,12 @@ export default defineNuxtConfig({
     'nuxt-i18n',
   ],
 
-  serverMiddleware: { '/api/v1': '~/server/rest-api' },
+  serverMiddleware: [
+    {
+      path: '/api/v1',
+      handler: '~/server/rest-api',
+    },
+  ],
 
   vite: {
     /* options for vite */
@@ -74,6 +80,7 @@ export default defineNuxtConfig({
   i18n: {},
 
   googleFonts: {
+    download: true,
     display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
     families: {
       Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900],

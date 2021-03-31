@@ -14,10 +14,13 @@
           rel="noopener noreferrer"
           class="btn btn-primary"
         >
-          Documentation
+          <span>Documentation</span>
         </a>
         <NuxtLink class="relative btn btn-secondary" :to="{ name: 'posts' }">
           <span>Posts</span>
+        </NuxtLink>
+        <NuxtLink class="relative btn btn-secondary" :to="{ name: 'theming' }">
+          <span>Theme</span>
           <AnimatePing />
         </NuxtLink>
       </div>
