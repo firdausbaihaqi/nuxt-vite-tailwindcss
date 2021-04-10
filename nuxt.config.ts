@@ -1,5 +1,4 @@
 import { defineNuxtConfig } from '@nuxtjs/composition-api'
-import { ServerMiddleware } from '@nuxt/types/config/server-middleware'
 
 export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head

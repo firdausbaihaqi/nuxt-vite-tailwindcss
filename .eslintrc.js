@@ -88,12 +88,13 @@ module.exports = {
     // Enforce or forbid parentheses after method calls without arguments in v-on directives
     'vue/v-on-function-call': [
       'error',
-      'always',
+      'never',
       {
         ignoreIncludesComment: false,
       },
     ],
     // Enforce valid nextTick function calls
     'vue/valid-next-tick': ['error'],
+    '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
   },
 }
