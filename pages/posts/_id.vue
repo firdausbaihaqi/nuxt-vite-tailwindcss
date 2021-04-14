@@ -30,37 +30,26 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  defineComponent,
-  ref,
-  useContext,
-  useFetch,
-  useRoute,
-} from '@nuxtjs/composition-api'
-import { Context } from '@nuxt/types'
+import { computed, defineComponent, ref, useContext, useFetch, useRoute } from '@nuxtjs/composition-api';
+import { Context } from '@nuxt/types';
 
 export default defineComponent({
   name: 'Post',
   validate({ params }: Context): Promise<boolean> | boolean {
-    return (
-      /^\d+$/.test(params.id) &&
-      parseInt(params.id) > 0 &&
-      parseInt(params.id) <= 100
-    )
+    return /^\d+$/.test(params.id) && parseInt(params.id) > 0 && parseInt(params.id) <= 100;
   },
 
   setup() {
-    const route = useRoute()
-    const id = computed(() => route.value.params.id)
-    const post = ref({})
-    const { $api } = useContext()
+    const route = useRoute();
+    const id = computed(() => route.value.params.id);
+    const post = ref({});
+    const { $api } = useContext();
 
     useFetch(async () => {
-      post.value = await $api.posts.show({ id: id.value })
-    })
+      post.value = await $api.posts.show({ id: id.value });
+    });
 
-    return { post }
+    return { post };
   },
-})
+});
 </script>

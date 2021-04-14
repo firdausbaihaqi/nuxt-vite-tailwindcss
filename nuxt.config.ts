@@ -1,6 +1,4 @@
-import { defineNuxtConfig } from '@nuxtjs/composition-api'
-
-export default defineNuxtConfig({
+export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Nuxt',
@@ -35,7 +33,7 @@ export default defineNuxtConfig({
     // https://vite.nuxtjs.org/get-started/usage
     // 'nuxt-vite', // ERROR  'defineComponent' is not exported by .nuxt/composition-api/entrypoint.js, imported by layouts/default.vue?vue&type=script&lang.ts
     // https://composition-api.nuxtjs.org/getting-started/setup
-    '@nuxtjs/composition-api',
+    '@nuxtjs/composition-api/module',
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
@@ -91,4 +89,4 @@ export default defineNuxtConfig({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-})
+};

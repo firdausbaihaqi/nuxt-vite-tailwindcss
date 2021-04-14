@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts">
-import { PropType, defineComponent } from '@nuxtjs/composition-api'
-import { Post } from '~/types'
+import { PropType, defineComponent } from '@nuxtjs/composition-api';
+import { Post } from '~/types';
 
 export default defineComponent({
   name: 'PostListItem',
@@ -25,5 +25,5 @@ export default defineComponent({
       required: true,
     },
   },
-})
+});
 </script>

@@ -1,12 +1,12 @@
-const colors = require('tailwindcss/colors')
-const themes = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors');
+const themes = require('tailwindcss/defaultTheme');
 
 const withOpacity = (variableName) => ({ opacityValue }) => {
   if (opacityValue != null) {
-    return `rgba(var(${variableName}), ${opacityValue})`
+    return `rgba(var(${variableName}), ${opacityValue})`;
   }
-  return `rgb(var(${variableName}))`
-}
+  return `rgb(var(${variableName}))`;
+};
 
 module.exports = {
   theme: {
@@ -46,4 +46,4 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
   ],
-}
+};
