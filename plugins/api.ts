@@ -1,5 +1,5 @@
 import createApi from '@/api';
-import { defineNuxtPlugin } from '@nuxtjs/composition-api';
+import { Plugin } from '@nuxt/types';
 
 interface keyable {
   [key: string]: any;
@@ -21,6 +21,8 @@ declare module 'vue/types/vue' {
   }
 }
 
-export default defineNuxtPlugin((ctx, inject) => {
+const myPlugin: Plugin = (ctx, inject) => {
   inject('api', createApi(ctx.$axios));
-});
+};
+
+export default myPlugin;

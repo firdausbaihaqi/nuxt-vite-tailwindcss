@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-4">
-    <NuxtLink class="btn btn-primary" :to="{ name: 'index' }"> Homepage </NuxtLink>
+    <NuxtLink class="btn btn-primary" :to="{ name: 'index' }">Homepage</NuxtLink>
 
     <FetchState class="mt-6" :state="$fetchState">
       <PostList v-slot="{ post }" :posts="posts">
@@ -11,19 +11,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api';
+import Vue from 'vue';
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Posts',
-  setup() {
-    const posts = ref([]);
-    const { $api } = useContext();
 
-    useFetch(async () => {
-      posts.value = await $api.posts.index();
-    });
+  data() {
+    return {
+      posts: [],
+    };
+  },
 
-    return { posts };
+  async fetch() {
+    this.posts = await this.$api.posts.index();
   },
 });
 </script>

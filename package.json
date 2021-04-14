@@ -16,16 +16,14 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js.ts,vue}": "eslint",
+    "*.{js,ts,vue}": "eslint",
     "*.{css,vue}": "stylelint"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/composition-api": "^0.23.0",
     "core-js": "^3.10.1",
     "express": "^4.17.1",
-    "nuxt": "^2.15.4",
-    "nuxt-i18n": "^6.25.0"
+    "nuxt": "^2.15.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
@@ -42,7 +40,6 @@
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
-    "@vue/composition-api": "^1.0.0-rc.6",
     "@vue/test-utils": "^1.1.4",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",

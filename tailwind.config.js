@@ -15,7 +15,7 @@ module.exports = {
         brand: colors.lightBlue,
       },
       fontFamily: {
-        sans: ['Inter', ...themes.fontFamily.sans],
+        sans: ['Inter var', ...themes.fontFamily.sans],
       },
       textColor: {
         skin: {

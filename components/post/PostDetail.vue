@@ -6,10 +6,10 @@
 </template>
 
 <script lang="ts">
-import { PropType, defineComponent } from '@nuxtjs/composition-api';
+import Vue, { PropType } from 'vue';
 import { Post } from '~/types';
 
-export default defineComponent({
+export default Vue.extend({
   name: 'PostDetail',
   props: {
     post: {

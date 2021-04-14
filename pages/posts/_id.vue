@@ -30,26 +30,23 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref, useContext, useFetch, useRoute } from '@nuxtjs/composition-api';
+import Vue from 'vue';
 import { Context } from '@nuxt/types';
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Post',
   validate({ params }: Context): Promise<boolean> | boolean {
     return /^\d+$/.test(params.id) && parseInt(params.id) > 0 && parseInt(params.id) <= 100;
   },
 
-  setup() {
-    const route = useRoute();
-    const id = computed(() => route.value.params.id);
-    const post = ref({});
-    const { $api } = useContext();
+  data() {
+    return {
+      post: {},
+    };
+  },
 
-    useFetch(async () => {
-      post.value = await $api.posts.show({ id: id.value });
-    });
-
-    return { post };
+  async fetch() {
+    this.post = await this.$api.posts.show({ id: this.$route.params.id });
   },
 });
 </script>

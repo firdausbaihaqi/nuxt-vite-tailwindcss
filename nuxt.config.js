@@ -41,17 +41,13 @@ export default {
     // https://google-fonts.nuxtjs.org/setup
     '@nuxtjs/google-fonts',
     // https://vite.nuxtjs.org/get-started/usage
-    // 'nuxt-vite',
-    // https://composition-api.nuxtjs.org/getting-started/setup
-    '@nuxtjs/composition-api/module',
+    'nuxt-vite',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://i18n.nuxtjs.org/setup
-    'nuxt-i18n',
   ],
 
   serverMiddleware: [
@@ -74,13 +70,11 @@ export default {
 
   image: {},
 
-  i18n: {},
-
   googleFonts: {
     download: true,
-    display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+    display: 'swap',
     families: {
-      Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      Inter: true,
     },
   },
 

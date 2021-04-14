@@ -1,8 +1,7 @@
 import { Context } from '@nuxt/types';
 import camelcaseKeys from 'camelcase-keys';
-import { defineNuxtPlugin } from '@nuxtjs/composition-api';
 
-export default defineNuxtPlugin(({ $axios, isDev }: Context) => {
+export default ({ $axios, isDev }: Context) => {
   $axios.onRequest((config) => {
     if (isDev) {
       console.log('Making request to ' + config.url);
@@ -22,4 +21,4 @@ export default defineNuxtPlugin(({ $axios, isDev }: Context) => {
       return data;
     };
   });
-});
+};
