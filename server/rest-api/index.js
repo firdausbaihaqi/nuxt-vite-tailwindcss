@@ -5,8 +5,13 @@ import posts from './routes/posts';
 // Create express instance
 const app = express();
 
-// Import API Routes
+// Parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Parse application/json
 app.use(bodyParser.json());
+
+// Import API Routes
 app.use('/posts', posts);
 
 // Start standalone server if directly running
