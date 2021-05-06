@@ -64,7 +64,11 @@ export default {
     },
   },
 
-  image: {},
+  image: {
+    domains: [
+      'images.unsplash.com'
+    ]
+  },
 
   googleFonts: {
     download: true,
