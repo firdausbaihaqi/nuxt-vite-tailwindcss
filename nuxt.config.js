@@ -64,10 +64,6 @@ export default {
     },
   },
 
-  tailwindcss: {
-    jit: true,
-  },
-
   image: {},
 
   googleFonts: {

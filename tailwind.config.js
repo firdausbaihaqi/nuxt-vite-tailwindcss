@@ -9,6 +9,7 @@ const withOpacity = (variableName) => ({ opacityValue }) => {
 };
 
 module.exports = {
+  mode: 'jit',
   theme: {
     extend: {
       colors: {
@@ -39,7 +40,6 @@ module.exports = {
       },
     },
   },
-
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
