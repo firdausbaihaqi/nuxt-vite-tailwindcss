@@ -19,7 +19,7 @@
 
     <div class="mt-6 w-full">
       <div class="aspect-w-3 aspect-h-2 sm:aspect-w-16 sm:aspect-h-9">
-        <NuxtImg class="object-cover object-center rounded shadow-xl" src="/img/photo-1519046904884-53103b34b206.jpg" />
+        <NuxtImg class="object-cover object-center rounded shadow-xl" provider="static" src="/img/photo-1519046904884-53103b34b206.jpg" />
       </div>
     </div>
   </div>
