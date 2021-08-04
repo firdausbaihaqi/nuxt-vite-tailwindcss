@@ -19,13 +19,43 @@
         <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
           <a
             href="#"
-            class="text-skin-inverted bg-skin-button-accent hover:bg-skin-button-accent-hover flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8"
+            class="
+              text-skin-inverted
+              bg-skin-button-accent
+              hover:bg-skin-button-accent-hover
+              flex
+              items-center
+              justify-center
+              px-4
+              py-3
+              border border-transparent
+              text-base
+              font-medium
+              rounded-md
+              shadow-sm
+              sm:px-8
+            "
           >
             Get started
           </a>
           <a
             href="#"
-            class="text-skin-base bg-skin-button-muted bg-opacity-60 hover:bg-opacity-70 flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8"
+            class="
+              text-skin-base
+              bg-skin-button-muted bg-opacity-60
+              hover:bg-opacity-70
+              flex
+              items-center
+              justify-center
+              px-4
+              py-3
+              border border-transparent
+              text-base
+              font-medium
+              rounded-md
+              shadow-sm
+              sm:px-8
+            "
           >
             Live demo
           </a>

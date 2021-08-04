@@ -1,12 +1,14 @@
 const colors = require('tailwindcss/colors');
 const themes = require('tailwindcss/defaultTheme');
 
-const withOpacity = (variableName) => ({ opacityValue }) => {
-  if (opacityValue != null) {
-    return `rgba(var(${variableName}), ${opacityValue})`;
-  }
-  return `rgb(var(${variableName}))`;
-};
+const withOpacity =
+  (variableName) =>
+  ({ opacityValue }) => {
+    if (opacityValue != null) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
 
 module.exports = {
   mode: 'jit',
