@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <ul v-if="posts.length" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <ul v-if="posts.length" class="grid max-w-2xl grid-cols-1 gap-4 mx-auto ">
       <li v-for="post in posts" :key="post.id" class="">
         <slot :post="post" />
       </li>
@@ -10,16 +10,16 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue';
-import { Post } from '~/types';
+import Vue, { PropType } from 'vue'
+import { Post } from '~/types'
 
 export default Vue.extend({
   name: 'PostList',
   props: {
     posts: {
       type: Array as PropType<Post[]>,
-      required: true,
-    },
-  },
-});
+      required: true
+    }
+  }
+})
 </script>

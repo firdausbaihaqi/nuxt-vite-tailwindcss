@@ -1,29 +1,25 @@
 <template>
-  <div class="container mx-auto p-4">
-    <NuxtLink class="btn btn-primary" :to="{ name: 'index' }">Homepage</NuxtLink>
-
-    <FetchState class="mt-6" :state="$fetchState">
-      <PostList v-slot="{ post }" :posts="posts">
-        <PostListItem :post="post" :route="{ name: 'posts-id', params: { id: post.id } }" />
-      </PostList>
-    </FetchState>
+  <div class="w-full min-h-screen p-4 mx-auto bg-gray-100">
+    <PostList v-if="this.posts.length !== 0" v-slot="{ post }" :posts="posts">
+      <PostListItem :post="post" :route="{ name: 'posts-id', params: { id: post.id } }" />
+    </PostList>
+    <div class="max-w-xl mx-auto mt-10" v-else>Memuat artikel...</div>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-
-export default Vue.extend({
-  name: 'Posts',
-
+<script>
+export default {
   data() {
     return {
       posts: [],
     };
   },
-
   async fetch() {
-    this.posts = await this.$api.posts.index();
+    const resp = await this.$axios.$get(
+      "https://mcpd-backend.herokuapp.com/api/articles?populate=comments"
+    );
+
+    this.posts = resp.data;
   },
-});
+};
 </script>

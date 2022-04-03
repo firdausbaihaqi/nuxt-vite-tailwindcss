@@ -1,52 +1,25 @@
 <template>
-  <div class="container mx-auto p-4">
-    <div class="flex items-center flex-wrap">
-      <NuxtLink class="btn btn-primary" :to="{ name: 'posts' }">Posts</NuxtLink>
-      <NuxtLink
-        v-if="$route.params.id > 1"
-        class="btn btn-secondary ml-2"
-        :to="{
-          name: 'posts-id',
-          params: { id: parseInt($route.params.id) - 1 },
-        }"
-      >
-        Previous
-      </NuxtLink>
-      <NuxtLink
-        v-if="$route.params.id < 100"
-        class="btn btn-secondary ml-2 sm:ml-auto"
-        :to="{
-          name: 'posts-id',
-          params: { id: parseInt($route.params.id) + 1 },
-        }"
-      >
-        Next
-      </NuxtLink>
-    </div>
-    <FetchState :state="$fetchState" class="mt-6">
-      <PostDetail :post="post" />
-    </FetchState>
+  <div v-if="post !== {}">
+    <PostDetail :post="post" :comments="comments" />
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import { Context } from '@nuxt/types';
-
-export default Vue.extend({
-  name: 'Post',
-  validate({ params }: Context): Promise<boolean> | boolean {
-    return /^\d+$/.test(params.id) && parseInt(params.id) > 0 && parseInt(params.id) <= 100;
-  },
-
+<script>
+export default {
   data() {
     return {
       post: {},
+      comments: [],
     };
   },
-
   async fetch() {
-    this.post = await this.$api.posts.show({ id: this.$route.params.id });
+    const resp = await this.$axios.$get(
+      `https://mcpd-backend.herokuapp.com/api/articles/${this.$route.params.id}?populate=comments`
+    );
+
+    this.post = resp.data.attributes;
+    this.id = resp.data.id;
+    this.comments = resp.data.attributes.comments.data;
   },
-});
+};
 </script>
